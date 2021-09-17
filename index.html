@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Instagram Photo Feed</title>
+    <style>
+        li.nav-item button.nav-link.active {background-color:gray;}
+    </style>
+</head>
+<body>
+    <!-- Primera barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!-- logo y nombre de la empresa al principio de la barra de navegación -->
+        <a class="navbar-brand" href="#">
+          <img src="icons/instagram.svg" alt="" width="30" height="24">
+          <i><b>Instagram</b></i>
+        </a>
+        <!-- ?? -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- collapse ?? contenido principal de la barra -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--"ms-auto" desplaza los elementos a la derecha. "me-auto" los desplaza a la izquierda-->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+            <!-- Button trigger modal -->
+            <li class="nav-item">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a new post
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content px-2">
+                    <div class="modal-body px-0">
+                      <textarea class="form-control mb-2" id="exampleFormControlTextarea1" rows="1"></textarea>
+                      <button type="button" class="btn btn-outline-secondary btn-sm">
+                        <img src="icons/camera-fill.svg">
+                      </button>
+                      <button type="button" class="btn btn-outline-secondary btn-sm">
+                        <img src="icons/geo-alt-fill.svg">
+                      </button>
+                    </div>
+                    <div class="modal-footer px-0 d-grid gap-1 d-flex justify-content-end">
+                      <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Rueda dentada y menú desplegable -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="icons/gear-fill.svg" width="25" height="20">
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Segunda barra de navegación - seleccionar vista -->
+    <ul class="nav nav-pills justify-content-center p-2" id="pills-tab" role="tablist">
+      <li class="nav-item btn-light" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+          <img src="icons/grid-3x3-gap-fill.svg" width="20" height="15">
+        </button>
+      </li>
+      <li class="nav-item btn-light" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" 
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+          <img src="icons/square-fill.svg" width="20" height="15">
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <!-- Vista 3x3 -->
+          <div class="container">
+            <div class="row">
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <video class="col-4 p-1 video" autoplay loop controls muted>
+                <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+              </video>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+              <div class="col-4 p-1"><img class="img-fluid" src="http://placeimg.com/400/300/nature"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <!-- Vista simple -->
+          <div class="container bg-light">
+            <div class="row">
+              <div class="card col-6 offset-3 py-2 px-0 mt-3 border-0 rounded">
+                <div class="card-header bg-white">
+                  <div class="row">
+                    <div class="col-auto me-auto">My first foto</div>
+                    <div class="col-auto text-black-50">12/14</div>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <img class="img-fluid" src="http://placeimg.com/800/600/nature">
+                  <p class="mt-1 mx-2"><b>23 Likes</b></p>
+                  <p class="mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus quaerat voluptatum sint magni ut fuga dolores voluptas, atque beatae quae blanditiis commodi hic aut iusto fugiat, quidem quibusdam nobis.</p>
+                </div>
+                <div class="card-footer bg-white border-0 ">
+                  <div class="row">
+                    <img class="col-auto" src="icons/heart.svg">
+                    <span class="col-auto me-auto ms-3 text-secondary">Comment</span>
+                    <img class="col-auto" src="icons/three-dots-vertical.svg">
+                  </div>
+                </div>
+             </div>
+            </div>
+            <div class="row">
+              <div class="card col-6 offset-3 py-2 px-0 mt-3 border-0 rounded">
+                <div class="card-header bg-white">
+                  <div class="row">
+                    <div class="col-auto me-auto">My first foto</div>
+                    <div class="col-auto text-black-50">12/14</div>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <img class="img-fluid" src="http://placeimg.com/800/600/nature">
+                  <p class="mt-1 mx-2"><b>23 Likes</b></p>
+                  <p class="mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus quaerat voluptatum sint magni ut fuga dolores voluptas, atque beatae quae blanditiis commodi hic aut iusto fugiat, quidem quibusdam nobis.</p>
+                </div>
+                <div class="card-footer bg-white border-0 ">
+                  <div class="row">
+                    <img class="col-auto" src="icons/heart.svg">
+                    <span class="col-auto me-auto ms-3 text-secondary">Comment</span>
+                    <img class="col-auto" src="icons/three-dots-vertical.svg">
+                  </div>
+                </div>
+             </div>
+            </div>
+            <div class="row">
+              <div class="card col-6 offset-3 py-2 px-0 mt-3 border-0 rounded">
+                <div class="card-header bg-white">
+                  <div class="row">
+                    <div class="col-auto me-auto">My first video</div>
+                    <div class="col-auto text-black-50">12/14</div>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <video class="video col-12" autoplay loop controls muted>
+                    <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+                  </video>
+                  <p class="mt-1 mx-2"><b>23 Likes</b></p>
+                  <p class="mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus quaerat voluptatum sint magni ut fuga dolores voluptas, atque beatae quae blanditiis commodi hic aut iusto fugiat, quidem quibusdam nobis.</p>
+                </div>
+                <div class="card-footer bg-white border-0 ">
+                  <div class="row">
+                    <img class="col-auto" src="icons/heart.svg">
+                    <span class="col-auto me-auto ms-3 text-secondary">Comment</span>
+                    <img class="col-auto" src="icons/three-dots-vertical.svg">
+                  </div>
+                </div>
+             </div>
+            </div>
+            <div class="row">
+              <div class="card col-6 offset-3 py-2 px-0 mt-3 border-0 rounded">
+                <div class="card-header bg-white">
+                  <div class="row">
+                    <div class="col-auto me-auto">My first foto</div>
+                    <div class="col-auto text-black-50">12/14</div>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <img class="img-fluid" src="http://placeimg.com/800/600/nature">
+                  <p class="mt-1 mx-2"><b>23 Likes</b></p>
+                  <p class="mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus quaerat voluptatum sint magni ut fuga dolores voluptas, atque beatae quae blanditiis commodi hic aut iusto fugiat, quidem quibusdam nobis.</p>
+                </div>
+                <div class="card-footer bg-white border-0 ">
+                  <div class="row">
+                    <img class="col-auto" src="icons/heart.svg">
+                    <span class="col-auto me-auto ms-3 text-secondary">Comment</span>
+                    <img class="col-auto" src="icons/three-dots-vertical.svg">
+                  </div>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+    </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
